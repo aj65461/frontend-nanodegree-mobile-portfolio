@@ -66,12 +66,21 @@ module.exports = function(grunt) {
           dest: 'views/production/images/'
         }]
       }
+    },
+    uglify: {
+      js: {
+        files: {
+          'production/js/all.min.js': ['production/js/all.js'],
+
+        }
+      }
     }
   });
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-grunt-contrib-uglify');
 
   // Register customer task for ngrok
   grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function() {
@@ -90,5 +99,5 @@ module.exports = function(grunt) {
   });
 
   // Register default tasks
-  grunt.registerTask('default', ['newer:imagemin','newer:uncss', 'newer:cssmin', 'psi-ngrok']);
+  grunt.registerTask('default', ['newer:uglify:js','newer:imagemin','newer:uncss', 'newer:cssmin', 'psi-ngrok']);
 }
