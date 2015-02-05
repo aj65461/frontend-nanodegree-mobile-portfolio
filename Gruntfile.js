@@ -36,9 +36,9 @@ module.exports = function(grunt) {
     cssmin: {
       target: {
         files: {
-          'production/style.min.css': ['css/style.css'],
-          'production/print.min.css': ['css/print.css'],
-          'views/production/style.min.css': ['views/tidy-bootstrap']
+          'production/css/style.min.css': ['css/style.css'],
+          'production/css/print.min.css': ['css/print.css'],
+          'views/production//css/style.min.css': ['views/tidy-bootstrap']
         }
       }
     }
@@ -51,7 +51,22 @@ module.exports = function(grunt) {
         }
       }
     },
-
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'img/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'production/img/'
+        },
+        {
+          expand: true,
+          cwd: 'views/images/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'views/production/images/'
+        }]
+      }
+    }
   });
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
