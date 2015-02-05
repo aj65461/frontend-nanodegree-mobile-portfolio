@@ -71,7 +71,7 @@ module.exports = function(grunt) {
       js: {
         files: {
           'production/js/all.min.js': ['production/js/all.js'],
-
+          'views/production/js/all.min.js': ['views/production/all.js']
         }
       }
     }
