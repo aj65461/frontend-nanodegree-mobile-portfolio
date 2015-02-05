@@ -35,8 +35,8 @@ module.exports = function(grunt) {
     },
     uncss: {
       dist: {
-        src: ['app/about.html', 'app/index.html'],
-        dest: 'dist/css/tidy.css'
+        src: ['views/pizza.html'],
+        dest: 'views/production/tidy-bootstrap.css'
         options: {
           report: 'min' // optional: include to report savings
         }
