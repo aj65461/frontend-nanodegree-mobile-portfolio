@@ -54,6 +54,7 @@ module.exports = function(grunt) {
   });
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-newer');
 
   // Register customer task for ngrok
   grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function() {
@@ -72,5 +73,5 @@ module.exports = function(grunt) {
   });
 
   // Register default tasks
-  grunt.registerTask('default', ['psi-ngrok']);
+  grunt.registerTask('default', ['newer:uncss', 'newer:cssmin', 'psi-ngrok']);
 }
