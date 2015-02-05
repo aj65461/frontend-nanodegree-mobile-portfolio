@@ -32,8 +32,18 @@ module.exports = function(grunt) {
           strategy: "mobile"
         }
       }
+    },
+    uncss: {
+      dist: {
+        src: ['app/about.html', 'app/index.html'],
+        dest: 'dist/css/tidy.css'
+        options: {
+          report: 'min' // optional: include to report savings
+        }
+      }
     }
   });
+  grunt.loadNpmTasks('grunt-uncss');
 
   // Register customer task for ngrok
   grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function() {
