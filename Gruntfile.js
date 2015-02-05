@@ -33,10 +33,19 @@ module.exports = function(grunt) {
         }
       }
     },
+    cssmin: {
+      target: {
+        files: {
+          'production/style.min.css': ['css/style.css'],
+          'production/print.min.css': ['css/print.css'],
+          'views/production/style.min.css': ['views/tidy-bootstrap']
+        }
+      }
+    }
     uncss: {
       dist: {
         src: ['views/pizza.html'],
-        dest: 'views/production/tidy-bootstrap.css'
+        dest: 'views/tidy-bootstrap.css',
         options: {
           report: 'min' // optional: include to report savings
         }
@@ -44,6 +53,7 @@ module.exports = function(grunt) {
     }
   });
   grunt.loadNpmTasks('grunt-uncss');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Register customer task for ngrok
   grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function() {
