@@ -50,11 +50,13 @@ module.exports = function(grunt) {
           report: 'min' // optional: include to report savings
         }
       }
-    }
+    },
+
   });
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Register customer task for ngrok
   grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function() {
@@ -73,5 +75,5 @@ module.exports = function(grunt) {
   });
 
   // Register default tasks
-  grunt.registerTask('default', ['newer:uncss', 'newer:cssmin', 'psi-ngrok']);
+  grunt.registerTask('default', ['newer:imagemin','newer:uncss', 'newer:cssmin', 'psi-ngrok']);
 }
