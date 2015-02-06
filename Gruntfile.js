@@ -16,6 +16,7 @@ module.exports = function(grunt) {
 
   // Grunt configuration
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     pagespeed: {
       options: {
         nokey: true,
