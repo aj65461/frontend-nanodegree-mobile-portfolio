@@ -4,7 +4,7 @@
  */
 var cb = function() {
   var l = document.createElement('link'); l.rel = 'stylesheet';
-  l.href = 'views/production/css/style.min.css';
+  l.href = 'production/css/style.min.css';
   var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
 };
 var raf = requestAnimationFrame || mozRequestAnimationFrame ||
