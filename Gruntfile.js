@@ -9,6 +9,10 @@
 
 var ngrok = require('ngrok');
 
+ngrok.connect(8080, function (err, url) {
+
+})
+
 module.exports = function(grunt) {
 
   // Load grunt tasks
@@ -39,18 +43,16 @@ module.exports = function(grunt) {
         files: {
           'production/css/style.min.css': ['css/style.css'],
           'production/css/print.min.css': ['css/print.css'],
-          'views/production//css/style.min.css': ['views/tidy-bootstrap']
+          'views/production/css/style.min.css': ['views/css/tidy-bootstrap']
         }
       }
     },
     uncss: {
       dist: {
-        src: ['views/pizza.html'],
-        dest: 'views/tidy-bootstrap.css',
-        options: {
-          report: 'min' // optional: include to report savings
-        }
+        files: {
+          'views/css/tidy-bootstrap.css': ['views/pizza.html']
       }
+     }
     },
     imagemin: {
       dynamic: {
@@ -86,7 +88,7 @@ module.exports = function(grunt) {
   // Register customer task for ngrok
   grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function() {
     var done = this.async();
-    var port = 9292;
+    var port = 8080;
 
     ngrok.connect(port, function(err, url) {
       if (err !== null) {
