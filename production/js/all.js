@@ -28,7 +28,7 @@ ga('send', 'pageview');
  */
 var cb = function() {
   var l = document.createElement('link'); l.rel = 'stylesheet';
-  l.href = 'css/style.css';
+  l.href = 'production/css/style.min.css';
   var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
 };
 var raf = requestAnimationFrame || mozRequestAnimationFrame ||
