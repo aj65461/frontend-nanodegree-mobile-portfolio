@@ -43,14 +43,14 @@ module.exports = function(grunt) {
         files: {
           'production/css/style.min.css': ['css/style.css'],
           'production/css/print.min.css': ['css/print.css'],
-          'views/production/css/style.min.css': ['views/css/tidy-bootstrap']
+          'views/production/css/style.min.css': ['views/production/css/tidy-bootstrap.css']
         }
       }
     },
     uncss: {
-      dist: {
+      production: {
         files: {
-          'views/css/tidy-bootstrap.css': ['views/pizza.html']
+          'views/production/css/tidy-bootstrap.css': ['views/pizza.html']
       }
      }
     },
