@@ -41,7 +41,7 @@ module.exports = function(grunt) {
           'views/production//css/style.min.css': ['views/tidy-bootstrap']
         }
       }
-    }
+    },
     uncss: {
       dist: {
         src: ['views/pizza.html'],
