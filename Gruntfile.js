@@ -100,4 +100,4 @@ module.exports = function(grunt) {
 
   // Register default tasks
   grunt.registerTask('default', ['newer:uglify:js','newer:imagemin','newer:uncss', 'newer:cssmin', 'psi-ngrok']);
-}
+};
