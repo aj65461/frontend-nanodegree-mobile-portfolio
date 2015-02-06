@@ -43,17 +43,17 @@ module.exports = function(grunt) {
         files: {
           'production/css/style.min.css': ['css/style.css'],
           'production/css/print.min.css': ['css/print.css'],
-          'views/production/css/style.min.css': ['views/production/css/tidy-bootstrap.css']
+          'views/production/css/style.min.css': ['views/production/css/all.css']
         }
       }
     },
-    uncss: {
+   /* uncss: {
       production: {
         files: {
           'views/production/css/tidy-bootstrap.css': ['views/pizza.html']
       }
      }
-    },
+    },*/
     imagemin: {
       dynamic: {
         files: [{
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.loadNpmTasks('grunt-uncss');
+  /*grunt.loadNpmTasks('grunt-uncss');*/
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -102,5 +102,5 @@ module.exports = function(grunt) {
   });
 
   // Register default tasks
-  grunt.registerTask('default', ['newer:uglify:js','newer:imagemin','newer:uncss', 'newer:cssmin', 'psi-ngrok']);
+  grunt.registerTask('default', ['newer:uglify:js','newer:imagemin', 'newer:cssmin', 'psi-ngrok']);
 };
