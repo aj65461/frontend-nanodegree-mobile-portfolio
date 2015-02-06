@@ -74,7 +74,7 @@ module.exports = function(grunt) {
       js: {
         files: {
           'production/js/all.min.js': ['production/js/all.js'],
-          'views/production/js/all.min.js': ['views/production/all.js']
+          'views/production/js/all.min.js': ['views/production/js/all.js']
         }
       }
     }
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Register customer task for ngrok
   grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function() {
