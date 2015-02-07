@@ -106,4 +106,8 @@ footer span {
   header p {
     padding-left: 4.5em;
   }
+
+  img {
+    max-width: 100%;
+  }
 }
