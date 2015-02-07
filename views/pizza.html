@@ -36,6 +36,44 @@
       margin-left: -15px;
       margin-right: -15px;
     }
+
+    /** {
+      outline: 1px solid red !important;
+    }*/
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -box-sizing: border-box;
+    }
+
+    form {
+      display: inline-block;
+    }
+
+    .centered {
+      text-align: center;
+    }
+
+    #pizzaSize {
+      font-weight: 800;
+    }
+
+    .mover {
+      position: fixed;
+      width: 256px;
+      z-index: -1;
+    }
+
+    .randomPizzaContainer {
+      float: left;
+      display: flex;
+    }
+
+    .randomPizzaContainer:after {
+      content: "";
+      display: table;
+      clear:both;
+    }
   </style>
 </head>
 
