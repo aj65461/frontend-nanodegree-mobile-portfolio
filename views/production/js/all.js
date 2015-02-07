@@ -514,7 +514,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // Referenced this site for code below: 
 // http://www.html5rocks.com/en/tutorials/speed/animations/
 var latestKnownScrollY = 0;
-  ticking = false;
+var ticking = false;
 
 function onScroll() {
   latestKnownScrollY = window.scrollY;
@@ -523,7 +523,7 @@ function onScroll() {
 
 function requestTick() {
   if(!ticking) {
-    requestAnimationFrame(update);
+    requestAnimationFrame(updatePositions);
   }
   ticking = true;
 }
