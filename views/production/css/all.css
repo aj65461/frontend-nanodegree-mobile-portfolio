@@ -14,12 +14,7 @@
 img {
   vertical-align: middle;
 }
-.img-responsive {
-  display: block;
-  width: 100% \9;
-  max-width: 100%;
-  height: auto;
-}
+
 .img-rounded {
   border-radius: 6px;
 }
@@ -64,12 +59,6 @@ hr {
   margin: 0;
   overflow: visible;
   clip: auto;
-}
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 @media (min-width: 768px) {
   .container {
