@@ -517,12 +517,12 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
-
+// Created a variable outside of for loop to hold the value of scrollTop
   var cachedScrollTop = document.body.scrollTop;
 
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((cachedScrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    items[i].style.transform = "translateX("+ 100 * phase + "px)";
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -542,6 +542,8 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
+  // Similar to cachedScrollTop above; Removes lookup from loop and stores in variable
+  var movingPizzas1 = document.querySelector("#movingPizzas1"); 
   for (var i = 0; i < 30; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
@@ -549,8 +551,9 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.height = "100px";
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
+    elem.style.left = elem.basicLeft + 'px';
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.querySelector("#movingPizzas1").appendChild(elem);
+    movingPizzas1.appendChild(elem);
   }
   updatePositions();
 });
