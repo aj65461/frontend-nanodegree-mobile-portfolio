@@ -466,7 +466,7 @@ var resizePizzas = function(size) {
   function changePizzaSizes(size) {
     // Created variable to hold value of querySelector for randomPizzaContainers
     var pizzaContainer = document.querySelectorAll(".randomPizzaContainer"); 
-    var dx = determineDx(pizzaContainer[i], size);
+    var dx = determineDx(pizzaContainer[0], size);
     var newwidth = (pizzaContainer[0].offsetWidth + dx) + 'px';
     var pizzaLength = pizzaContainer.length;
     for (var i = 0; i < pizzaLength; i++) {
