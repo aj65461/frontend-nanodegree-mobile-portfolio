@@ -564,7 +564,7 @@ window.addEventListener('scroll', onScroll, false);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  // Similar to cachedScrollTop above; Removes lookup from loop and stores in variable
+  // Removed lookup from loop and stored in variable 
   var movingPizzas1 = document.querySelector("#movingPizzas1"); 
   for (var i = 0; i < 30; i++) {
     var elem = document.createElement('img');
