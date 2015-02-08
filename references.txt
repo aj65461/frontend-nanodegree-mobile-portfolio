@@ -1,0 +1,13 @@
+References:
+
+1. http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/
+
+2. https://www.npmjs.com/package/grunt-newer 
+
+3. http://www.html5rocks.com/en/tutorials/speed/animations/
+
+4. https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
+
+5. https://github.com/kevdonk/frontend-nanodegree-mobile-portfolio
+
+6. https://github.com/bahalps/frontend-nanodegree-mobile-portfolio
