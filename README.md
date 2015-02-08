@@ -1,10 +1,10 @@
 ## Website Performance Optimization portfolio project
 
-##To view this site, simple click on the following link:
+##To view this site, simply click on the following link:
 
 http://aj65461.github.io/frontend-nanodegree-mobile-portfolio/
 
-From there you can click on any of the pages, copy their urls and then enter them in to Google's PageSpeed Insights linked here:
+From there you can click on any of the pages, copy their URLs, and then enter them into Google's PageSpeed Insights linked here:
 
 https://developers.google.com/speed/pagespeed/insights/
 
@@ -17,9 +17,9 @@ The goal of this project was to analyze the Critical Rendering Path of a provide
 * Improve time to resize pizzas to less than 5ms in pizza.html
 
 ## Outline of Optimizations I made
-* Re-sized images using Photoshop to better fit the layout of page
+* Re-sized images using Photoshop to better fit the layout of the page
 * Inlined critical CSS
-* Used a Javascript file with an async tag that contained all necessary Javascript files, as well as a Javascript file that would laod the remaing CSS after the page was rendered, thus removing render-blocking CSS and Javascript.
+* Used a Javascript file with an async tag that contained all necessary Javascript files, as well as a Javascript file that would load the remaining CSS after the page was rendered, thus removing render-blocking CSS and Javascript.
 * For main.js I moved some variables and querySelectors outside their associated for-loops because it was not necessary to have them recalculated as you scroll down the page.
 * Removed the scroll event from the updatePositions function and made use of requestAnimationFrame.
 * Changed the number of pizzas that were being appended to the page.
